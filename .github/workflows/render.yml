@@ -13,17 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Convert resume YAML To JSON
-        uses: fabasoad/data-format-converter-action@v0
-        id: yaml2json
-        with:
-          input: resume.yml
-          from: yaml
-          to: json
+      - name: Convert resume from YAML to JSON (using yq)
+        run: |
+          sudo apt update
+          sudo apt install yq
+          yq -p yaml -o json resume.yml
       
-      - name: Write JSON to file
-        run: echo "${{ steps.yaml2json.outputs.output }}" >> resume.json
-
       - name: Archive resume JSON
         uses: actions/upload-artifact@v4
         with:
