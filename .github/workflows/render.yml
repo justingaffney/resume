@@ -35,7 +35,7 @@ jobs:
         run: npx resumed validate
 
       - name: Install theme
-        run: npx resumed install jsonresume-theme-elegant
+        run: npm install jsonresume-theme-elegant
 
       - name: Render to HTML
         run: npx resumed render resume.json -t jsonresume-theme-elegant -o resume.html
