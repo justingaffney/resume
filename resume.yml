@@ -11,7 +11,7 @@ basics:
 
   location:
     address: ''
-    postalCode: 4000
+    postalCode: '4000'
     city: Brisbane
     countryCode: AUS
     region: Queensland
