@@ -28,20 +28,17 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install resume-cli
-        run: npm install resume-cli
+      - name: Install resumed
+        run: npm install resumed
 
       - name: Validate resume.json
-        run: npx resume validate
+        run: npx resumed validate
 
       - name: Install theme
         run: npm install jsonresume-theme-elegant
 
       - name: Render to HTML
-        run: npx resume export resume.json --theme jsonresume-theme-elegant --format html
-
-      - name: Render to PDF
-        run: npx resume export resume.json --theme jsonresume-theme-elegant --format pdf
+        run: npx resumed render resume.json -t jsonresume-theme-elegant -o resume.html
 
       - name: Archive resume HTML
         uses: actions/upload-artifact@v4
@@ -49,8 +46,4 @@ jobs:
           name: resume.html
           path: resume.html
 
-      - name: Archive resume PDF
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume.pdf
-          path: resume.pdf
+      # TODO Render to PDF
