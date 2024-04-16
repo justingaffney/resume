@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json
+
+basics:
+  name: Justin Gaffney
+  label: Senior Software Engineer
+  image: https://avatars.githubusercontent.com/u/13529705
+  email: me@justingaffney.dev
+  url: https://justingaffney.dev
+
+  summary: ''
+
+  location:
+    address: ''
+    postalCode: 4000
+    city: Brisbane
+    countryCode: AUS
+    region: Queensland
+
+  profiles:
+  - network: GitHub
+    username: jlgaffney
+    url: https://github.com/justingaffney
+  - network: LinkedIn
+    username: justin-gaffney
+    url: https://www.linkedin.com/in/justin-gaffney-4330057a
+
+work:
+- name: RPMGlobal
+  location: Brisbane, Queensland, Australia
+  description: Mining software and advisory company
+  position: Senior Software Engineer
+  url: https://rpmglobal.com
+  startDate: 2015-12
+  summary: Developing and maintaining enterprise software systems and products.
+  highlights:
+  - 2024- Building cloud-native licensing and security systems to support company's
+    SaaS solutions. Utilises many Azure services, including Azure AD B2C, managed
+    identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service
+    Bus, and Azure SignalR Service.
+  - 2015-2023 Developed and maintained enterprise financial budgeting solution
+    XERAS Enterprise. Eventually migrated it from an on-premise, single-tenant, desktop
+    client/monlithic SOAP service architecture to a cloud-native, multi-tenant, web
+    client/microservice RESTful service architecture to support the company's push
+    to subscription-based licensing and modern SaaS architectures for its suite of
+    products.
+
+education:
+- institution: Queensland University of Technology
+  url: https://qut.edu.au
+  area: Computer Science
+  studyType: Bachelor of Information Technology (Computer Science)
+  startDate: 2013
+  endDate: 2016
+  score: 6.23
+
+languages:
+- language: English
+  fluency: Native speaker
+
+skills: []
+interests: []
+references: []
+projects: []
