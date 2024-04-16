@@ -23,6 +23,12 @@ jobs:
       - name: Write JSON to file
         run: echo "${{ steps.yaml2json.outputs.output }}" > resume.json
 
+      - name: Archive resume JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: resume.json
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
