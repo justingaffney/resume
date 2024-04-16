@@ -15,7 +15,7 @@ jobs:
 
       - name: Convert resume from YAML to JSON (using yq)
         run: |
-          snap install yq
+          sudo snap install yq
           yq -p yaml -o json resume.yml
       
       - name: Archive resume JSON
