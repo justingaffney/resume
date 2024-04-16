@@ -13,10 +13,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Convert resume from YAML to JSON (using yq)
-        run: |
-          sudo snap install yq
-          yq -p yaml -o json resume.yml
+      - name: Convert resume from YAML to JSON
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq -p yaml -o json resume.yml > resume.json
       
       - name: Archive resume JSON
         uses: actions/upload-artifact@v4
