@@ -1,0 +1,41 @@
+name: Render resume
+
+on:
+    push:
+      branches:
+        - main
+
+jobs:
+
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Convert resume YAML To JSON
+        uses: fabasoad/data-format-converter-action@v0
+        with:
+          input: resume.yml
+          from: yaml
+          to: json
+      
+      - name: Write JSON to file
+        run: echo "${{ steps.yaml2json.outputs.output }}" > resume.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install resumed
+        run: npm install resumed
+
+      - name: Render to HTML
+        run: resumed resume.json -t jsonresume-theme-stackoverflow -o resume.html
+
+      - name: Archive resume
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: resume.html
