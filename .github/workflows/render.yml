@@ -48,3 +48,9 @@ jobs:
         with:
           name: resume.html
           path: resume.html
+
+      - name: Archive resume PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume.pdf
+          path: resume.pdf
