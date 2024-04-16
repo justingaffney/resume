@@ -7,7 +7,7 @@ on:
 
 jobs:
 
-  generate:
+  render:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +22,7 @@ jobs:
           to: json
       
       - name: Write JSON to file
-        run: echo '::escapeData::${{ steps.yaml2json.outputs.output }}' >> resume.json
+        run: echo "${{ steps.yaml2json.outputs.output }}" >> resume.json
 
       - name: Archive resume JSON
         uses: actions/upload-artifact@v4
