@@ -15,6 +15,7 @@ jobs:
 
       - name: Convert resume YAML To JSON
         uses: fabasoad/data-format-converter-action@v0
+        id: yaml2json
         with:
           input: resume.yml
           from: yaml
@@ -26,7 +27,7 @@ jobs:
       - name: Archive resume JSON
         uses: actions/upload-artifact@v4
         with:
-          name: resume
+          name: resume.json
           path: resume.json
 
       - name: Setup Node
@@ -43,5 +44,5 @@ jobs:
       - name: Archive resume
         uses: actions/upload-artifact@v4
         with:
-          name: resume
+          name: resume.html
           path: resume.html
