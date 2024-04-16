@@ -49,9 +49,9 @@ education:
   url: https://qut.edu.au
   area: Computer Science
   studyType: Bachelor of Information Technology (Computer Science)
-  startDate: 2013
-  endDate: 2016
-  score: 6.23
+  startDate: '2013'
+  endDate: '2016'
+  score: '6.23'
 
 languages:
 - language: English
