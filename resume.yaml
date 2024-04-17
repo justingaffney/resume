@@ -18,7 +18,7 @@ basics:
 
   profiles:
   - network: GitHub
-    username: jlgaffney
+    username: justingaffney
     url: https://github.com/justingaffney
   - network: LinkedIn
     username: justin-gaffney
