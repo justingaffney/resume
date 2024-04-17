@@ -1,5 +1,8 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json
 
+meta:
+  theme: elegant
+
 basics:
   name: Justin Gaffney
   label: Senior Software Engineer
