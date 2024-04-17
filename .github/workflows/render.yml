@@ -6,7 +6,8 @@ on:
       - main
 
 env:
-  THEME: elegant
+  THEME_HTML: elegant
+  THEME_PDF: rickosborne
 
 jobs:
 
@@ -24,7 +25,7 @@ jobs:
         run: npm install resumed
 
       - name: Install resume theme
-        run: npm install jsonresume-theme-${{ env.THEME }}
+        run: npm install jsonresume-theme-${{ env.THEME_HTML }} jsonresume-theme-${{ env.THEME_PDF }}
 
       - name: Generate JSON
         uses: mikefarah/yq@master
@@ -36,14 +37,13 @@ jobs:
 
       - name: Generate HTML
         run: |
-          npx resumed render resume.json -t jsonresume-theme-${{ env.THEME }} -o resume.html
-          mkdir tmp
-          cp resume.html tmp/index.html
+          npx resumed render resume.json -t jsonresume-theme-${{ env.THEME_HTML }} -o resume.html
+          npx resumed render resume.json -t jsonresume-theme-${{ env.THEME_PDF }} -o pdf_input/index.html
 
       - name: Generate PDF
         uses: ferdinandkeller/html-to-pdf-action@v1
         with:
-          source-path: tmp
+          source-path: pdf_input
           destination-path: resume.pdf
 
 #      - name: Archive YAML
