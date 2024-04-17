@@ -23,7 +23,7 @@ jobs:
       - name: Convert resume from YAML to JSON
         uses: mikefarah/yq@master
         with:
-          cmd: yq -p yaml -o json resume.yml > resume.json
+          cmd: yq -p yaml -o json resume.yaml > resume.json
 
       - name: Validate resume.json
         run: npx resumed validate
