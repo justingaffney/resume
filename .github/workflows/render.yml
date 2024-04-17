@@ -31,6 +31,13 @@ jobs:
       - name: Generate HTML
         run: npx resumed render resume.json -t jsonresume-theme-elegant -o resume.html
 
+      - name: Generate PDF
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: resume.html
+          outputFile: resume.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
       - name: Archive YAML
         uses: actions/upload-artifact@v4
         with:
@@ -48,3 +55,11 @@ jobs:
         with:
           name: resume.html
           path: resume.html
+
+      - name: Archive PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume.pdf
+          path: resume.pdf
+
+      # TODO Update resume.json Gist
