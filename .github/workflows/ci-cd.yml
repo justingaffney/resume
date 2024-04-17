@@ -1,4 +1,4 @@
-name: Generate resume artifacts
+name: CI/CD
 
 on:
   push:
@@ -11,7 +11,7 @@ env:
 
 jobs:
 
-  generate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -47,34 +47,10 @@ jobs:
           source-path: pdf_input
           destination-path: resume.pdf
 
-#      - name: Archive YAML
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: resume.yaml
-#          path: resume.yaml
-#
-#      - name: Archive JSON
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: resume.json
-#          path: resume.json
-#
-#      - name: Archive HTML
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: resume.html
-#          path: resume.html
-#
-#      - name: Archive PDF
-#        uses: actions/upload-artifact@v4
-#        with:
-#          name: resume.pdf
-#          path: resume.pdf
-
       - name: Archive resume artifacts
         uses: actions/upload-artifact@v4
         with:
           name: resume
           path: resume.*
 
-      # TODO Update resume.json Gist
+# TODO Deploy job. For release branches create release, update resume.json Gist, and deploy GitHub Pages to https://resume.justingaffney.dev
