@@ -6,11 +6,11 @@ meta:
 basics:
   name: Justin Gaffney
   label: Senior Software Engineer
-  image: &i avatars.githubusercontent.com/u/13529705
+  image: &i https://avatars.githubusercontent.com/u/13529705
   picture: *i # Older versions get the image URL from this field
   email: me@justingaffney.dev
   phone: ''
-  url: justingaffney.dev
+  url: https://justingaffney.dev
 
   summary: ''
 
@@ -24,17 +24,17 @@ basics:
   profiles:
   - network: GitHub
     username: justingaffney
-    url: github.com/justingaffney
+    url: https://github.com/justingaffney
   - network: LinkedIn
     username: justingaffney-dev
-    url: linkedin.com/in/justingaffney-dev
+    url: https://linkedin.com/in/justingaffney-dev
 
 work:
 - name: RPMGlobal
   location: Brisbane, Australia
   description: Mining software and advisory company
   position: Senior Software Engineer
-  url: rpmglobal.com
+  url: https://rpmglobal.com
   startDate: 2023-10
   summary: Developing and maintaining enterprise software systems and products.
   highlights:
@@ -46,7 +46,7 @@ work:
   location: Brisbane, Australia
   description: Mining software and advisory company
   position: Software Engineer
-  url: rpmglobal.com
+  url: https://rpmglobal.com
   startDate: 2015-12
   endDate: 2023-10
   summary: Developing and maintaining enterprise software systems and products.
@@ -62,7 +62,7 @@ volunteer: []
 
 education:
 - institution: Queensland University of Technology
-  url: qut.edu.au
+  url: https://qut.edu.au
   area: Computer Science
   studyType: Bachelor of Information Technology
   startDate: '2013'
