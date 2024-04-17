@@ -31,6 +31,12 @@ jobs:
       - name: Render to HTML
         run: npx resumed render resume.json -t jsonresume-theme-elegant -o resume.html
 
+      - name: Archive YAML
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume.yaml
+          path: resume.yaml
+
       - name: Archive JSON
         uses: actions/upload-artifact@v4
         with:
