@@ -37,6 +37,7 @@ jobs:
       - name: Generate HTML
         run: |
           npx resumed render resume.json -t jsonresume-theme-${{ env.THEME }} -o resume.html
+          mkdir tmp
           cp resume.html tmp/index.html
 
       - name: Generate PDF
