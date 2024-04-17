@@ -40,7 +40,7 @@ jobs:
       - name: Generate PDF
         run: |
           sudo apt-get install wkhtmltopdf
-          wkhtmltopdf resume.html resume.pdf
+          wkhtmltopdf resume.html resume.pdf --enable-local-file-access
 
 #      - name: Archive YAML
 #        uses: actions/upload-artifact@v4
