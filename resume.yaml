@@ -62,11 +62,40 @@ education:
   endDate: '2016'
   score: '6.23'
 
+skills:
+- name: C#
+  level: Master
+  keywords:
+  - .NET
+  - ASP.NET Core
+  - Entity Framework
+  - Blazor
+  - SignalR
+  - WPF
+  - Maui
+  - Xamarin
+- name: Azure
+  level: Advanced
+  keywords:
+  - Azure App Service
+  - Azure Container Apps
+  - Azure Functions
+  - Azure Blob Storage
+  - Azure Table Storage
+  - Azure Service Bus
+  - Azure Event Hub
+  - Azure SQL
+  - Azure Cosmos DB
+  - Azure SignalR Service
+  - Azure Key Vault
+  - Application Insights
+  - Managed Identities
+  - Azure AD B2C
+
 languages:
 - language: English
   fluency: Native speaker
 
-skills: []
 interests: []
 references: []
 projects: []
