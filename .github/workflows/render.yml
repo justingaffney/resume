@@ -38,11 +38,9 @@ jobs:
         run: npx resumed render resume.json -t jsonresume-theme-${{ env.THEME }} -o resume.html
 
       - name: Generate PDF
-        uses: fifsky/html-to-pdf-action@master
-        with:
-          htmlFile: resume.html
-          outputFile: resume.pdf
-          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+        run: |
+          sudo apt-get install wkhtmltopdf
+          wkhtmltopdf resume.html resume.pdf
 
 #      - name: Archive YAML
 #        uses: actions/upload-artifact@v4
