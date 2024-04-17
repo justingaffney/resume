@@ -6,7 +6,8 @@ meta:
 basics:
   name: Justin Gaffney
   label: Senior Software Engineer
-  image: https://avatars.githubusercontent.com/u/13529705
+  image: &i https://avatars.githubusercontent.com/u/13529705
+  picture: *i # Older versions get the image URL from this field
   email: me@justingaffney.dev
   phone: ''
   url: https://justingaffney.dev
