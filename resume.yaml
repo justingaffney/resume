@@ -5,6 +5,7 @@ basics:
   label: Senior Software Engineer
   image: https://avatars.githubusercontent.com/u/13529705
   email: me@justingaffney.dev
+  phone: ''
   url: https://justingaffney.dev
 
   summary: ''
@@ -53,6 +54,8 @@ work:
     to subscription-based licensing and modern SaaS architectures for its suite of
     products.
 
+volunteer: []
+
 education:
 - institution: Queensland University of Technology
   url: https://qut.edu.au
@@ -62,6 +65,10 @@ education:
   endDate: '2016'
   score: '6.23'
 
+awards: []
+certificates: []
+publications: [] 
+ 
 skills:
 - name: C#
   level: Master
