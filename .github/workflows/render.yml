@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  THEME: class
+
 jobs:
 
   generate:
@@ -17,8 +20,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install resume CLI and theme
-        run: npm install resumed jsonresume-theme-elegant
+      - name: Install resume CLI
+        run: npm install resumed
+
+      - name: Install resume theme
+        run: npm install jsonresume-theme-${{ env.THEME }}
 
       - name: Generate JSON
         uses: mikefarah/yq@master
@@ -29,7 +35,7 @@ jobs:
         run: npx resumed validate
 
       - name: Generate HTML
-        run: npx resumed render resume.json -t jsonresume-theme-elegant -o resume.html
+        run: npx resumed render resume.json -t jsonresume-theme-${{ env.THEME }} -o resume.html
 
       - name: Generate PDF
         uses: fifsky/html-to-pdf-action@master
