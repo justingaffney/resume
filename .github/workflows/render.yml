@@ -7,10 +7,7 @@ on:
 
 env:
   THEME_HTML: elegant
-  #THEME_PDF: kendall
-  #THEME_PDF: flat
-  THEME_PDF: relaxed
-  #THEME_PDF: rickosborne
+  THEME_PDF: kendall
 
 jobs:
 
