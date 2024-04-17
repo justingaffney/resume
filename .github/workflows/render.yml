@@ -35,12 +35,15 @@ jobs:
         run: npx resumed validate
 
       - name: Generate HTML
-        run: npx resumed render resume.json -t jsonresume-theme-${{ env.THEME }} -o resume.html
+        run: |
+          npx resumed render resume.json -t jsonresume-theme-${{ env.THEME }} -o resume.html
+          cp resume.html tmp/index.html
 
       - name: Generate PDF
-        run: |
-          sudo apt install weasyprint 
-          weasyprint resume.html resume.pdf
+        uses: ferdinandkeller/html-to-pdf-action@v1
+        with:
+          source-path: tmp
+          destination-path: resume.pdf
 
 #      - name: Archive YAML
 #        uses: actions/upload-artifact@v4
