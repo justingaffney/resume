@@ -39,8 +39,9 @@ jobs:
 
       - name: Generate PDF
         run: |
-          sudo apt-get install wkhtmltopdf
-          wkhtmltopdf resume.html resume.pdf --enable-local-file-access
+          sudo apt-get install libxml2-dev libxslt-dev libffi-dev libcairo2-dev libpango1.0-dev python-dev python3-pip
+          sudo pip3 install WeasyPrint 
+          weasyprint resume.html resume.pdf
 
 #      - name: Archive YAML
 #        uses: actions/upload-artifact@v4
