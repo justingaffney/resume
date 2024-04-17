@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
           
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -20,7 +20,7 @@ jobs:
       - name: Install resume CLI and theme
         run: npm install resumed jsonresume-theme-elegant
 
-      - name: Convert resume from YAML to JSON
+      - name: Generate JSON
         uses: mikefarah/yq@master
         with:
           cmd: yq -p yaml -o json resume.yaml > resume.json
@@ -28,7 +28,7 @@ jobs:
       - name: Validate resume.json
         run: npx resumed validate
 
-      - name: Render to HTML
+      - name: Generate HTML
         run: npx resumed render resume.json -t jsonresume-theme-elegant -o resume.html
 
       - name: Archive YAML
