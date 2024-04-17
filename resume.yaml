@@ -18,7 +18,7 @@ basics:
     address: ''
     postalCode: '4000'
     city: Brisbane
-    countryCode: AUS
+    countryCode: AU
     region: Queensland
 
   profiles:
@@ -31,7 +31,7 @@ basics:
 
 work:
 - name: RPMGlobal
-  location: Brisbane, Queensland, Australia
+  location: Brisbane, Australia
   description: Mining software and advisory company
   position: Senior Software Engineer
   url: rpmglobal.com
@@ -43,7 +43,7 @@ work:
     identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service
     Bus, and Azure SignalR Service.
 - name: RPMGlobal
-  location: Brisbane, Queensland, Australia
+  location: Brisbane, Australia
   description: Mining software and advisory company
   position: Software Engineer
   url: rpmglobal.com
