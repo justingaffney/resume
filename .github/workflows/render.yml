@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  THEME: class
+  THEME: elegant
 
 jobs:
 
