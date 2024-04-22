@@ -107,14 +107,14 @@ languages:
   fluency: Native speaker
 
 interests:
- - name: Self-hosting
-   keywords:
-     - Proxmox
-     - Debian
-     - Docker
-     - Traefik
-     - Wireguard
-     - Home Assistant
+- name: Self-hosting
+  keywords:
+  - Proxmox
+  - Debian
+  - Docker
+  - Traefik
+  - Wireguard
+  - Home Assistant
 
 projects: []
 
