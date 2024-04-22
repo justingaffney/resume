@@ -31,7 +31,7 @@ jobs:
         run: npm install resumed jsonresume-theme-${{ env.THEME_HTML }} jsonresume-theme-${{ env.THEME_PDF }}
 
       - name: Generate JSON
-        run: npx resume-renderer -i resume.yaml -o resume.json -f json
+        run: npx @justingaffney/resume-renderer -i resume.yaml -o resume.json -f json
 
       - name: Validate resume.json
         run: npx resumed validate
