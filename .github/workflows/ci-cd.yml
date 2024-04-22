@@ -19,33 +19,34 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.x
+          registry-url: https://npm.pkg.github.com
 
-      - name: Install resume CLI
-        run: npm install resumed
+      - name: Install resume-renderer
+        run: npm install @justingaffney/resume-renderer
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install resume theme
-        run: npm install jsonresume-theme-${{ env.THEME_HTML }} jsonresume-theme-${{ env.THEME_PDF }}
+      - name: Install resumed CLI tool and JSON Resume themes
+        run: npm install resumed jsonresume-theme-${{ env.THEME_HTML }} jsonresume-theme-${{ env.THEME_PDF }}
 
       - name: Generate JSON
-        uses: mikefarah/yq@master
-        with:
-          cmd: yq -p yaml -o json resume.yaml > resume.json
+        run: npx resume-renderer -i resume.yaml -o resume.json -f json
 
       - name: Validate resume.json
         run: npx resumed validate
 
+      - name: Generate Markdown
+        run: npx resume-renderer -i resume.json -o resume.md -f md
+
       - name: Generate HTML
-        run: |
-          npx resumed render resume.json -t jsonresume-theme-${{ env.THEME_HTML }} -o resume.html
-          mkdir pdf_input
-          npx resumed render resume.json -t jsonresume-theme-${{ env.THEME_PDF }} -o pdf_input/index.html
+        run: npx resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
 
       - name: Generate PDF
-        uses: ferdinandkeller/html-to-pdf-action@v1
-        with:
-          source-path: pdf_input
-          destination-path: resume.pdf
+        run: npx resume-renderer -i resume.json -o resume.pdf -f pdf --theme ${{ env.THEME_PDF }}
+
+      - name: Generate DOCX
+        run: npx resume-renderer -i resume.json -o resume.docx -f docx --theme ${{ env.THEME_PDF }}
 
       - name: Archive resume artifacts
         uses: actions/upload-artifact@v4
