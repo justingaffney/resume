@@ -34,16 +34,16 @@ jobs:
         run: npx resumed validate
 
       - name: Generate Markdown
-        run: npx resume-renderer -i resume.json -o resume.md -f md
+        run: npx @justingaffney/resume-renderer -i resume.json -o resume.md -f md
 
       - name: Generate HTML
-        run: npx resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
+        run: npx @justingaffney/resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
 
       - name: Generate PDF
-        run: npx resume-renderer -i resume.json -o resume.pdf -f pdf --theme ${{ env.THEME_PDF }}
+        run: npx @justingaffney/resume-renderer -i resume.json -o resume.pdf -f pdf --theme ${{ env.THEME_PDF }}
 
       - name: Generate DOCX
-        run: npx resume-renderer -i resume.json -o resume.docx -f docx --theme ${{ env.THEME_PDF }}
+        run: npx @justingaffney/resume-renderer -i resume.json -o resume.docx -f docx --theme ${{ env.THEME_PDF }}
 
       - name: Archive resume artifacts
         uses: actions/upload-artifact@v4
@@ -51,4 +51,5 @@ jobs:
           name: resume
           path: resume.*
 
-# TODO Deploy job. For release branches create release, update resume.json Gist, and deploy GitHub Pages to https://resume.justingaffney.dev
+# TODO Release job. For created releases, render and upload resume artifacts to GitHub Releases
+# TODO Deploy job. For published releases, update resume.json Gist, and deploy GitHub Pages to https://resume.justingaffney.dev
