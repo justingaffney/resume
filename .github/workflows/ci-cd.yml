@@ -33,8 +33,8 @@ jobs:
       - name: Validate resume.json
         run: npx resumed validate
 
-      - name: Generate Markdown
-        run: npx @justingaffney/resume-renderer -i resume.json -o resume.md -f markdown
+      #- name: Generate Markdown
+      #  run: npx @justingaffney/resume-renderer -i resume.json -o resume.md -f markdown
 
       - name: Generate HTML
         run: npx @justingaffney/resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
