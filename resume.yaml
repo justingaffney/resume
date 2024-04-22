@@ -38,8 +38,8 @@ work:
   startDate: 2023-10
   summary: Developing and maintaining enterprise software systems and products.
   highlights:
-  - Building cloud-native licensing and security systems to support company's
-    SaaS solutions. Utilises many Azure services, including Azure AD B2C, managed
+  - Building cloud-native licensing and security systems to support RPMGlobal's
+    SaaS solutions. Utilising many Azure services, including Azure AD B2C, managed
     identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service
     Bus, and Azure SignalR Service.
 - name: RPMGlobal
@@ -49,14 +49,14 @@ work:
   url: https://rpmglobal.com
   startDate: 2015-12
   endDate: 2023-10
-  summary: Developing and maintaining enterprise software systems and products.
+  summary: Developed and maintained the enterprise-grade financial budget modeling solution _XERAS Enterprise_.
   highlights:
-  - Developed and maintained enterprise financial budgeting solution
-    XERAS Enterprise. Eventually migrated it from an on-premise, single-tenant, desktop
-    client/monlithic SOAP service architecture to a cloud-native, multi-tenant, web
-    client/microservice RESTful service architecture to support the company's push
-    to subscription-based licensing and modern SaaS architectures for its suite of
-    products.
+  - Migrated the product from an on-premise, single-tenant, stateful, desktop client/monlithic SOAP service architecture to a cloud-native, multi-tenant, stateless, web client/microservice RESTful service architecture to support RPMGlobal's push to subscription-based licensing and modern SaaS architectures for its suite of products
+  - Many substantial performance improvements across the entire codebase, especially the calculation engine and the data access layer
+  - Implemented many significant features, including; Plan vs Actuals, model import/export, multi-environment model logic/data synchronisation, improved algorithm for traversing a model's cell reference graph for efficient recalculation
+  - Significant refactoring of the codebase during the development of a new major version, to reduce technical debt and improve maintainability and reliability
+  - Eased the transition from .NET Framework to .NET Core by migrating all relevent C# projects to .NET Standard
+  - Heavily contributed to implementing the complete redesign of the desktop application's user interface, with a focus on cross-platform compatibility to support the eventual migration to a Blazor web client
 
 volunteer: []
 
