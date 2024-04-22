@@ -106,7 +106,16 @@ languages:
 - language: English
   fluency: Native speaker
 
-interests: []
+interests:
+ - name: Self-hosting
+   keywords:
+     - Proxmox
+     - Debian
+     - Docker
+     - Traefik
+     - Wireguard
+     - Home Assistant
+
 projects: []
 
 references:
