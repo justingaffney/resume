@@ -36,12 +36,11 @@ work:
   position: Senior Software Engineer
   url: https://rpmglobal.com
   startDate: 2023-10
-  summary: Developing and maintaining enterprise software systems and products.
+  summary: Developing and maintaining cloud-native licensing and security systems, and internal infrastructure tools and services.
   highlights:
-  - Building cloud-native licensing and security systems to support RPMGlobal's
-    SaaS solutions. Utilising many Azure services, including Azure AD B2C, managed
-    identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service
-    Bus, and Azure SignalR Service.
+  - Building the next generation of RPMGlobal's licensing and security systems, to support company's SaaS solutions
+  - Built a monitoring service that tracks RPMGlobal's global network of legacy licensing servers, used by RPMGlobal's on-premise products, and alerts the support team of any issues
+  - Utilising many Azure services, including Azure AD B2C, managed identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service Bus, and Azure SignalR Service
 - name: RPMGlobal
   location: Brisbane, Australia
   description: Mining software and advisory company
