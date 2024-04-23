@@ -138,6 +138,17 @@ skills:
   - Application Insights
   - Managed Identities
   - Azure AD B2C
+- name: DevOps
+  level: Advanced
+  keywords:
+  - Azure DevOps
+  - GitHub Actions
+  - Jenkins
+  - Docker
+  - Proxmox
+  - Traefik
+  - Infrastructure as Code
+  - Pulumi
 
 interests:
 - name: Self-hosting
