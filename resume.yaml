@@ -60,7 +60,7 @@ work:
   endDate: 2023-10
   summary: Developed and maintained the financial budget modeling solution _XERAS Enterprise_
   highlights:
-  - Migrated the product from an on-premise, single-tenant, stateful, desktop client/monlithic SOAP service architecture to a cloud-native, multi-tenant, stateless, web client/microservice RESTful service architecture to support RPMGlobal's push to subscription-based licensing and modern SaaS architectures for its suite of products
+  - Migrated the product from an on-premise, single-tenant, stateful, desktop client/monlithic SOAP service architecture to a cloud-native, multi-tenant, stateless, web client/RESTful and event-driven microservice architecture, as part of RPMGlobal's roadmap towards subscription-based licensing and modern SaaS architectures for its suite of products
   - Many substantial performance improvements across the entire codebase, especially the calculation engine and the data access layer
   - Implemented many significant features, including; Plan vs Actuals, model import/export, multi-environment model logic/data synchronisation, improved algorithm for traversing a model's cell reference graph for efficient recalculation
   - Significant refactoring of the codebase during the development of a new major version, to reduce technical debt and improve maintainability and reliability
