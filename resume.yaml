@@ -36,6 +36,8 @@ languages:
   fluency: Fluent
 - language: TypeScript
   fluency: Fluent
+- language: SQL
+  fluency: Fluent
 
 work:
 - name: RPMGlobal
