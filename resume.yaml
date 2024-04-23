@@ -64,7 +64,7 @@ work:
   - Many substantial performance improvements across the entire codebase, especially the calculation engine and the data access layer
   - Implemented many significant features, including; Plan vs Actuals, model import/export, multi-environment model logic/data synchronisation, improved algorithm for traversing a model's cell reference graph for efficient recalculation
   - Significant refactoring of the codebase during the development of a new major version, to reduce technical debt and improve maintainability and reliability
-  - Eased the transition from .NET Framework to .NET Core by migrating all relevent C# projects to .NET Standard
+  - Eased the transition from .NET Framework to .NET Core by migrating all relevant C# projects to .NET Standard
   - Heavily contributed to implementing the complete redesign of the desktop application's user interface, with a focus on cross-platform compatibility to support the eventual migration to a Blazor web client
 
 volunteer: []

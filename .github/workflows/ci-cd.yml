@@ -37,6 +37,8 @@ jobs:
       - name: Validate resume.json
         run: npx resumed validate
 
+      # TODO Add typo detection
+
       - name: Generate resume artifacts
         run: |
           npx @justingaffney/resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
