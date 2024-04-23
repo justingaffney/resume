@@ -60,12 +60,12 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Setup Pages artifact
-        run: cp resume.html index.html
+        run: |
+          mkdir _site
+          cp resume.html _site/index.html
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: index.html
 
   # TODO Release job. For created releases, render and upload resume artifacts to GitHub Releases
 
