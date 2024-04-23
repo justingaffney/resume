@@ -12,7 +12,7 @@ basics:
   phone: ''
   url: https://justingaffney.dev
 
-  summary: ''
+  #summary: I love building software, solving complex problems, and automation. Even this resume was automatically generated using the [JSON Resume](https://jsonresume.org) standard, [resume-renderer](https://github.com/justingaffney/resume-renderer) and GitHub Actions! The source code for this resume can be found [here](https://github.com/justingaffney/resume)
 
   location:
     address: ''
