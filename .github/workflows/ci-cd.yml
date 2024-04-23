@@ -37,17 +37,14 @@ jobs:
       - name: Validate resume.json
         run: npx resumed validate
 
+      - name: Generate resume artifacts
+        run: |
+          npx @justingaffney/resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
+          npx @justingaffney/resume-renderer -i resume.json -o resume.pdf -f pdf --theme ${{ env.THEME_PDF }}
+          npx @justingaffney/resume-renderer -i resume.json -o resume.docx -f docx --theme ${{ env.THEME_PDF }}
+
       #- name: Generate Markdown
       #  run: npx @justingaffney/resume-renderer -i resume.json -o resume.md -f markdown
-
-      - name: Generate HTML
-        run: npx @justingaffney/resume-renderer -i resume.json -o resume.html -f html --theme ${{ env.THEME_HTML }}
-
-      - name: Generate PDF
-        run: npx @justingaffney/resume-renderer -i resume.json -o resume.pdf -f pdf --theme ${{ env.THEME_PDF }}
-
-      - name: Generate DOCX
-        run: npx @justingaffney/resume-renderer -i resume.json -o resume.docx -f docx --theme ${{ env.THEME_PDF }}
 
       - name: Upload resume artifacts
         uses: actions/upload-artifact@v4
@@ -74,6 +71,7 @@ jobs:
     permissions:
       contents: read
       pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
