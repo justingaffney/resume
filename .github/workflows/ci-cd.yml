@@ -12,6 +12,9 @@ env:
 jobs:
 
   build:
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -67,6 +70,9 @@ jobs:
 
   # TODO Only deploy for published releases
   deploy:
+    permissions:
+      contents: read
+      pages: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
