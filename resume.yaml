@@ -49,7 +49,7 @@ work:
   summary: Developing cloud-native licensing and security systems, and internal infrastructure tools and services
   highlights:
   - Building the next generation of RPMGlobal's licensing and security systems, to support the company's growing suite of SaaS solutions
-  - Built a health monitoring service for RPMGlobal's legacy licence servers, used by the company's on-premise products, and alerts the support team of any issues
+  - Built a health monitoring service for RPMGlobal's legacy licence servers, used by the company's on-premise products, that monitors the health and uptime of the servers and automatically notifies the support team of any issues or status changes
   - Utilising many Azure services, including Azure AD B2C, managed identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service Bus, and Azure SignalR Service
 - name: RPMGlobal
   location: Brisbane, Australia
