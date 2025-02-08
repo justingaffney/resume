@@ -34,6 +34,8 @@ languages:
   fluency: Native speaker
 - language: C#
   fluency: Fluent
+- language: Rust
+  fluency: Fluent
 - language: TypeScript
   fluency: Fluent
 - language: SQL
