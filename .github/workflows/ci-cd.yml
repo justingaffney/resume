@@ -16,7 +16,7 @@ jobs:
       contents: read
       packages: read
       pages: read
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
           
