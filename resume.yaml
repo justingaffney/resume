@@ -164,6 +164,7 @@ skills:
 interests:
 - name: Self-hosting
   keywords:
+  - GitOps
   - Proxmox
   - Debian
   - Docker
