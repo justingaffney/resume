@@ -59,7 +59,7 @@ work:
   - RPMGlobal's next generation licensing system, integrating application usage metrics for consumption-based licensing
   - Common libraries to allow the product teams to easily and securely integrate with Azure services and RPMGlobal's cloud platform
   - Common IaC libraries, based on Pulumi and written in C#, to allow product teams to easily write their own IaC and keep it up to date with their evolving architecture
-  - Built a health monitoring service for RPMGlobal's legacy licence servers, used by the company's on-premise products, that monitors the health and uptime of the servers and automatically notifies the support team of any issues or status changes
+  - Built a health monitoring service for RPMGlobal's legacy licence servers, used by the company's desktop and on-premise client/server products, that monitors the health and uptime of the servers and automatically notifies the support team of any issues or status changes
   - Utilising many Azure services, including Azure AD B2C, managed identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service Bus, Azure Redis, and Azure SignalR Service
 - name: RPMGlobal
   location: Brisbane, Australia
@@ -101,8 +101,7 @@ skills:
   - Blazor
   - SignalR
   - WPF
-  - Maui
-  - Xamarin
+  - Maui (previously known as Xamarin)
 - name: Databases
   level: Advanced
   keywords:
@@ -147,6 +146,7 @@ skills:
   - Azure Cosmos DB
   - Azure SignalR Service
   - Azure Key Vault
+  - Azure Cache for Redis
   - Application Insights
   - Managed Identities
   - Azure AD B2C
@@ -167,6 +167,7 @@ interests:
   - Proxmox
   - Debian
   - Docker
+  - Kubernetes
   - Traefik
   - Wireguard
   - Home Assistant
