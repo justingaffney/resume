@@ -54,7 +54,7 @@ work:
   - Extracting common functionality into platform services (e.g. notifications, auditing, mail) to support subsequent rearchitecture work, as well as new product development
   - Decoupling product features into independent microservices using domain-driven design
   - Standardising architectural patterns and application configuration into common libraries to simplify the development, maintenance, deployment, and monitoring of a large number of microservice applications
-  - Standardising CI/CD (implemented in GitHub Actions) into common workflows, simplifying the CI/CD of existing repositories and speeding up the development of new applications
+  - Standardising CI/CD (implemented in GitHub Actions) into common workflows. Handles rapid deployment of changes to multiple production environment, broadcasts deployment summarisation notifications, simplifies the CI/CD of existing repositories, and speeds up the development of new applications
 - name: RPMGlobal
   location: Brisbane, Australia
   description: Mining software
@@ -142,7 +142,6 @@ skills:
   - gRPC
   - Node.js
   - OpenAPI
-  - Swagger
   - WebAssembly
   - Next.js
   - Gatsby
@@ -169,9 +168,11 @@ skills:
   keywords:
   - Azure DevOps
   - GitHub Actions
-  - Docker
+  - Containers
   - Proxmox
-  - Traefik
+  - Kubernetes
+  - OpenTelemetry
+  - Monitoring
   - Infrastructure as Code
   - Pulumi
 
@@ -181,10 +182,8 @@ interests:
   - GitOps
   - Proxmox
   - Debian
-  - Docker
+  - Containers
   - Kubernetes
-  - Traefik
-  - Wireguard
   - Home Assistant
 
 projects: []
