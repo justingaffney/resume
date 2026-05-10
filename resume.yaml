@@ -42,12 +42,26 @@ languages:
   fluency: Fluent
 
 work:
+- name: Alii
+  location: Brisbane, Australia
+  description: Accounts payable automation software
+  position: Senior Software Engineer
+  url: https://myalii.cloud
+  startDate: 2025-08
+  summary: Modernising the main product from a monolithic architecture to a cloud-native, event-driven, microservice architecture
+  highlights:
+  - Simplifying application IaC, written in C# using Pulumi, and deployment to Azure by creating NuGet libraries which abstract away the complexity of configuring inter-related Azure resources (such as Entra ID, Azure Managed Identity, App Service Plans, Web Apps, Function Apps, Azure Private Link, etc.)
+  - Extracting common functionality into platform services (e.g. notifications, auditing, mail) to support subsequent rearchitecture work, as well as new product development
+  - Decoupling product features into independent microservices using domain-driven design
+  - Standardising architectural patterns and application configuration into common libraries to simplify the development, maintenance, deployment, and monitoring of a large number of microservice applications
+  - Standardising CI/CD (implemented in GitHub Actions) into common workflows, simplifying the CI/CD of existing repositories and speeding up the development of new applications
 - name: RPMGlobal
   location: Brisbane, Australia
-  description: Mining software and advisory company
+  description: Mining software
   position: Senior Software Engineer
   url: https://rpmglobal.com
   startDate: 2023-10
+  endDate: 2025-07
   summary: Working in the platform team to develop cloud-native licensing and security systems, and internal infrastructure tools and services
   highlights:
   - Building RPMGlobal's Azure-based cloud platform, to support the company's growing suite of SaaS solutions
@@ -63,7 +77,7 @@ work:
   - Utilising many Azure services, including Azure AD B2C, managed identities, Azure Functions, Azure SQL, Azure Blob and Table Storage, Azure Service Bus, Azure Redis, and Azure SignalR Service
 - name: RPMGlobal
   location: Brisbane, Australia
-  description: Mining software and advisory company
+  description: Mining software
   position: Software Engineer
   url: https://rpmglobal.com
   startDate: 2015-12
